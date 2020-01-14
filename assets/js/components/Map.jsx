@@ -1,4 +1,9 @@
 import React, {Component, createElement} from 'react'
+import styled from 'styled-components';
+
+const H3 = styled.h3`
+  color: yellow;
+`;
 
 class Map extends Component {
   constructor(props) {
@@ -22,7 +27,7 @@ class Map extends Component {
 
     return (
       <div className="map-component">
-        <h3>{title}</h3>
+        <H3>{title}</H3>
         <p>{subtitle}</p>
         <button onClick={this.changeColor}>Change color</button>
         <div className="map" style={{backgroundColor: this.state.color}}>Jestem mapą :)</div>
